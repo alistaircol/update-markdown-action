@@ -61,7 +61,7 @@ task yamllint
 <summary>Tagging</summary>
 
 ```bash
-git tag -a -m "My first action release" v1.1
+git tag -a -m "My first action release" v0.0.1
 git push --follow-tags
 ```
 
