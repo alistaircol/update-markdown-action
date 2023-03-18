@@ -1,0 +1,35 @@
+---
+version: 3
+
+vars:
+  DOCKER_RUN: docker run --rm --tty --volume="$(pwd):/app" --workdir="/app"
+  DOCKER_IMAGE_YAMLLINT: cytopia/yamllint:latest
+  DOCKER_IMAGE_ACTIONLINT: rhysd/actionlint:latest
+
+tasks:
+  default:
+    silent: true
+    cmds:
+    - cmd: task --list
+
+  yamllint:
+    desc: Lint all yaml files (and actionlint on workflow files)
+    interactive: true
+    silent: true
+    cmds:
+    - cmd: "{{.DOCKER_RUN}} {{.DOCKER_IMAGE_YAMLLINT}} {{.CLI_ARGS}} ."
+    - task: actionlint
+
+  actionlint:
+    desc: Lint all workflow yaml files
+    interactive: true
+    silent: true
+    # status: A list of commands to check if this task should run.
+    # -z True if the length of string is zero.
+    # -n True if the length of string is non-zero.
+    # we need this to run when GITHUB_ACTIONS is zero, so we need to return non-zero for this to run
+    status:
+    - |
+        [[ -n "${GITHUB_ACTIONS}" ]]
+    cmds:
+    - cmd: "{{.DOCKER_RUN}} {{.DOCKER_IMAGE_ACTIONLINT}} {{.CLIARGS}}"

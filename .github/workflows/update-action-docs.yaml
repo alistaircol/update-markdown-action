@@ -1,0 +1,36 @@
+---
+name: Update action documentation
+on:
+  workflow_dispatch:
+  push:
+    paths:
+    - action.yml
+    - .github/workflows/update-action-docs.yaml
+
+permissions:
+  contents: write
+
+jobs:
+  docs:
+    name: Update GitHub action documentation section in README.md
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - name: Setup node
+      uses: actions/setup-node@v3
+      with:
+      node-version: 16
+    - name: Update README.md with GitHub action documentation
+      uses: npalm/action-docs-action
+      with:
+        readme: README.md
+        actionFile: action.yml
+        tocLevel: 2
+    - name: Commit updated README.md if applicable
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_user_email: ${github.actor}@users.noreply.github.com
+        commit_message: |
+          chore(docs): Update GitHub action documentation section in README.md
+        commit_options: --no-verify

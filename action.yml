@@ -1,0 +1,28 @@
+---
+name: Update markdown section
+description: Update a section in a markdown with arbitrary markup
+
+branding:
+  icon: book-open
+  color: gray-dark
+
+inputs:
+  file:
+    required: false
+    description: Relative path to markdown document to update
+    default: README.md
+  delimiter-open:
+    required: false
+    description: Opening delimiter to indicate the section to update
+    default: "`<!-- start-section -->`"
+  delimiter-close:
+    required: false
+    description: Closing delimiter to indicate the section to update
+    default: "`<!-- end-section -->`"
+  content:
+    required: true
+    description: Contents to place inside the section delimiters
+
+runs:
+  using: node16
+  main: index.js
