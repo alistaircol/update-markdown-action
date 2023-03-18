@@ -7,8 +7,8 @@ on:
   push:
     paths:
     - index.js
-    - lib/**/*.js
-    - tests/**/*.js
+    - lib/*.js
+    - tests/*.js
     - .github/workflows/test.yaml
 
 jobs:
