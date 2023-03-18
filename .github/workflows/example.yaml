@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
   push:
     paths:
+    - README.md
     - Taskfile.yaml
     - .github/workflows/example.yaml
 

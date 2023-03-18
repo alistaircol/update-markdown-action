@@ -6,6 +6,7 @@ on:
   workflow_dispatch:
   push:
     paths:
+    - README.md
     - action.yml
     - .github/workflows/update-action-docs.yaml
 
