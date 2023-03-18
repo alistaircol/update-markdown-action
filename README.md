@@ -53,6 +53,11 @@ This workflow repository has an [example workflow](https://github.com/alistairco
 
 It updates the development section below with contents of `task --list`.
 
+I have used this workflow elsewhere to:
+
+* List all tasks in a Taskfile with description
+* List all tasks being executed by an ansible playbook
+
 ## Development
 
 <!-- start-task-list -->
