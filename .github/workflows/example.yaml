@@ -37,6 +37,9 @@ jobs:
         delimiter-open: <!-- start-task-list -->
         delimiter-close: <!-- end-task-list -->
         content: |
+          > **Note**
+          > This section of the `README.md` is updated using this action in an [example workflow](https://github.com/alistaircol/update-markdown-action/blob/main/.github/workflows/example.yaml#L33)!
+
           ```
           ${{ steps.tasks.outputs.tasks }}
           ```
