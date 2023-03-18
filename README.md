@@ -78,7 +78,10 @@ task: Available tasks for this project:
 <summary>Tagging</summary>
 
 ```bash
-git tag -a -m "My first action release" v0.0.1
+# get most recent version
+git --no-pager tag |  sort -V
+# increment version
+git tag -a -m "Refactor and add unit tests" v0.0.2
 git push --follow-tags
 ```
 
