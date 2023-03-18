@@ -5,11 +5,37 @@
 <a href="https://github.com/alistaircol/update-markdown-action/actions/workflows/test.yaml"><img alt="javscript-action status" src="https://github.com/alistaircol/update-markdown-action/actions/workflows/test.yaml/badge.svg"></a>
 <a href="https://img.shields.io/github/v/release/alistaircol/update-markdown-action"><img alt="release" src="https://img.shields.io/github/v/release/alistaircol/update-markdown-action"></a>
 
+Replaces the contents of a markdown (or, technically any file) between a pair of delimiters.
+
+```markdown
+My repository
+
+<!-- start-dynamic-section -->
+<!-- end-dynamic-section -->
+
+More test
+```
+
+Can become
+
+```diff
+ My repository
+
+ <!-- start-dynamic-section -->
++```bash
++# i'm a forkbomb - don't run me
++:(){ :|:& };:
++```
+ <!-- end-dynamic-section -->
+
+ More test
+```
+
+---
+
 <!-- local: npm install -g action-docs -->
 <!-- local: action-docs --update-readme -->
 <!-- https://github.com/npalm/action-docs#tldr -->
-
----
 
 <!-- action-docs-description -->
 ## Description
