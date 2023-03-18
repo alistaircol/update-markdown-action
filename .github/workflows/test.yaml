@@ -1,5 +1,5 @@
 ---
-name: Unit Test
+name: Unit tests
 
 # yamllint disable-line rule:truthy
 on:
