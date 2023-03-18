@@ -39,8 +39,8 @@ This action is a `node16` action.
   uses: alistaircol/update-markdown-section@v1
   with:
     file: ansible/README.md
-    delimiter-open: <!-- start-task-list -->
-    delimiter-close: <!-- end-task-list -->
+    delimiter-open: <!-- start -->
+    delimiter-close: <!-- end -->
     content: |
       ```
       // TODO: get content
