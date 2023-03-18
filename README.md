@@ -2,21 +2,6 @@
 
 A simple workflow to update sections in a markdown file.
 
-## Usage
-
-```yaml
-- name: Update usage list tasks
-  uses: alistaircol/update-markdown-section@v1
-  with:
-    file: ansible/README.md
-    delimiter-open: <!-- start-task-list -->
-    delimiter-close: <!-- end-task-list -->
-    content: |
-      ```
-      // TODO: get content
-      ```
-```
-
 <!-- local: npm install -g action-docs -->
 <!-- local: action-docs --update-readme -->
 
@@ -47,6 +32,37 @@ Update a section in a markdown with arbitrary markup
 This action is a `node16` action.
 <!-- action-docs-runs -->
 
+## Usage
+
+```yaml
+- name: Update usage list tasks
+  uses: alistaircol/update-markdown-section@v1
+  with:
+    file: ansible/README.md
+    delimiter-open: <!-- start-task-list -->
+    delimiter-close: <!-- end-task-list -->
+    content: |
+      ```
+      // TODO: get content
+      ```
+```
+
 ## Examples
 
 TODO
+
+## Development
+
+```bash
+task yamllint
+```
+
+<details>
+<summary>Tagging</summary>
+
+```bash
+git tag -a -m "My first action release" v1.1
+git push --follow-tags
+```
+
+</details>
