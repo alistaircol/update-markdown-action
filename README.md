@@ -1,6 +1,9 @@
 # Update Markdown Action
 
-A simple workflow to update sections in a markdown file.
+> A simple workflow to update sections in a markdown file.
+
+<a href="https://github.com/alistaircol/update-markdown-action/actions/workflows/test.yaml"><img alt="javscript-action status" src="https://github.com/alistaircol/update-markdown-action/actions/workflows/test.yaml/badge.svg"></a>
+<a href="https://img.shields.io/github/v/release/alistaircol/update-markdown-action"><img alt="release" src="https://img.shields.io/github/v/release/alistaircol/update-markdown-action"></a>
 
 <!-- local: npm install -g action-docs -->
 <!-- local: action-docs --update-readme -->
@@ -77,3 +80,9 @@ git push --follow-tags
 ```
 
 </details>
+
+## Testing
+
+```bash
+npm run test
+```
