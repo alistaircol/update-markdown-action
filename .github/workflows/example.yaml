@@ -1,0 +1,48 @@
+---
+name: Update development documentation
+
+# yamllint disable-line rule:truthy
+on:
+  workflow_dispatch:
+  push:
+    paths:
+    - Taskfile.yaml
+    - .github/workflows/example.yaml
+
+permissions:
+  contents: write
+
+jobs:
+  docs:
+    name: Update development documentation section in README.md
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+    - name: Install Task
+      uses: arduino/setup-task@v1
+    - name: Install node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+    - name: Get development tasks
+      id: tasks
+      run: |
+        tasks=task >> "$GITHUB_OUTPUT"
+    - name: Update development tasks section
+      uses: alistaircol/update-markdown-section@v0.0.1
+      with:
+        file: README.md
+        delimiter-open: <!-- start-task-list -->
+        delimiter-close: <!-- end-task-list -->
+        content: |
+          ```
+          ${{ steps.tasks.outputs.tasks }}
+          ```
+    - name: Commit updated README.md if applicable
+      uses: stefanzweifel/git-auto-commit-action@v4
+      with:
+        commit_user_email: ${github.actor}@users.noreply.github.com
+        commit_message: |
+          chore(docs): Update GitHub action documentation section in README.md
+        commit_options: --no-verify

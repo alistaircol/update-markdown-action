@@ -53,9 +53,8 @@ TODO
 
 ## Development
 
-```bash
-task yamllint
-```
+<!-- start-task-list -->
+<!-- end-task-list -->
 
 <details>
 <summary>Tagging</summary>
