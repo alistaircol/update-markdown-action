@@ -38,11 +38,15 @@ jobs:
         delimiter-close: <!-- end-task-list -->
         content: |
           > **Note**
-          > This section of the `README.md` is updated using this action in an [example workflow](https://github.com/alistaircol/update-markdown-action/blob/main/.github/workflows/example.yaml#L33)!
+          > This comment marks the start of a section which is updated using this action in an [example workflow](https://github.com/alistaircol/update-markdown-action/blob/main/.github/workflows/example.yaml#L33)!
 
           ```
           ${{ steps.tasks.outputs.tasks }}
           ```
+
+          > **Note**
+          > This comment marks the end of a section which is updated using this action!
+
     - name: Commit updated README.md if applicable
       uses: stefanzweifel/git-auto-commit-action@v4
       with:
