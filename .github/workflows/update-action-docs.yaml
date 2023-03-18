@@ -1,5 +1,7 @@
 ---
 name: Update action documentation
+
+# yamllint disable-line rule:truthy
 on:
   workflow_dispatch:
   push:
@@ -20,9 +22,9 @@ jobs:
     - name: Setup node
       uses: actions/setup-node@v3
       with:
-      node-version: 16
+        node-version: 16
     - name: Update README.md with GitHub action documentation
-      uses: npalm/action-docs-action
+      uses: npalm/action-docs-action@v1.1.0
       with:
         readme: README.md
         actionFile: action.yml
