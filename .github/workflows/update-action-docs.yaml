@@ -24,7 +24,7 @@ jobs:
       with:
         node-version: 16
     - name: Update README.md with GitHub action documentation
-      uses: npalm/action-docs-action@v1.1.0
+      uses: npalm/action-docs-action@v1.4.0
       with:
         readme: README.md
         actionFile: action.yml
