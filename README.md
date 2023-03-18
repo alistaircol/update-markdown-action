@@ -54,6 +54,11 @@ TODO
 ## Development
 
 <!-- start-task-list -->
+```
+task: Available tasks for this project:
+* actionlint:       Lint all workflow yaml files
+* yamllint:         Lint all yaml files (and actionlint on workflow files)
+```
 <!-- end-task-list -->
 
 <details>
