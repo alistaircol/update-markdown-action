@@ -68,13 +68,16 @@ I have used this workflow elsewhere to:
 
 <!-- start-task-list -->
 > **Note**
-> This section of the `README.md` is updated using this action in an [example workflow](https://github.com/alistaircol/update-markdown-action/blob/main/.github/workflows/example.yaml#L33)!
+> This comment marks the start of a section which is updated using this action in an [example workflow](https://github.com/alistaircol/update-markdown-action/blob/main/.github/workflows/example.yaml#L33)!
 
 ```
 task: Available tasks for this project:
 * actionlint:       Lint all workflow yaml files
 * yamllint:         Lint all yaml files (and actionlint on workflow files)
 ```
+
+> **Note**
+> This comment marks the end of a section which is updated using this action!
 <!-- end-task-list -->
 
 <details>
