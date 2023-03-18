@@ -30,7 +30,7 @@ jobs:
       run: |
         tasks=task >> "$GITHUB_OUTPUT"
     - name: Update development tasks section
-      uses: alistaircol/update-markdown-section@v0.0.1
+      uses: alistaircol/update-markdown-action@v0.0.1
       with:
         file: README.md
         delimiter-open: <!-- start-task-list -->
