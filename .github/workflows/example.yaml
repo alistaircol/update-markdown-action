@@ -29,9 +29,7 @@ jobs:
     - name: Get development tasks
       id: tasks
       run: |
-        echo "tasks<<EOF" >> "$GITHUB_OUTPUT"
-        task >> "$GITHUB_OUTPUT"
-        echo "EOF" >> "$GITHUB_OUTPUT"
+        { echo "tasks<<EOF"; task; echo "EOF"; } >> "$GITHUB_OUTPUT"
     - name: Update development tasks section
       uses: alistaircol/update-markdown-action@v0.0.2
       with:
