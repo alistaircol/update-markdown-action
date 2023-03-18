@@ -40,10 +40,7 @@ This action is a `node16` action.
   with:
     file: ansible/README.md
     delimiter-open: <!-- start-task-list -->
-```
-
-```
-<!-- end-task-list -->
+    delimiter-close: <!-- end-task-list -->
     content: |
       ```
       // TODO: get content
