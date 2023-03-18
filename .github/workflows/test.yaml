@@ -12,7 +12,7 @@ on:
     - .github/workflows/test.yaml
 
 jobs:
-  unit:
+  test:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
