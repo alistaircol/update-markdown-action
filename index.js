@@ -5,7 +5,10 @@ try {
   const file = core.getInput('file');
   const delimiterOpen = core.getInput('delimiter-open');
   const delimiterClose = core.getInput('delimiter-close');
-  const contents = `\n${core.getInput('content')}\n`;
+  const contents = `
+<!-- DO NOT EDIT THIS SECTION - IT IS UPDATED BY A GITHUB WORKFLOW -->
+${core.getInput('content')}
+`;
 
   update_document(
     file,
