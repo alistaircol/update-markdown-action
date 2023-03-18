@@ -5,8 +5,19 @@
 <a href="https://github.com/alistaircol/update-markdown-action/actions/workflows/test.yaml"><img alt="javscript-action status" src="https://github.com/alistaircol/update-markdown-action/actions/workflows/test.yaml/badge.svg"></a>
 <a href="https://img.shields.io/github/v/release/alistaircol/update-markdown-action"><img alt="release" src="https://img.shields.io/github/v/release/alistaircol/update-markdown-action"></a>
 
-<!-- START doctoc -->
-<!-- END doctoc -->
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+- [Summary](#summary)
+- [Description](#description)
+- [Inputs](#inputs)
+- [Runs](#runs)
+- [Usage](#usage)
+- [Examples](#examples)
+- [Development](#development)
+- [Testing](#testing)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
 ## Summary
 
