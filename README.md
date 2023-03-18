@@ -49,7 +49,9 @@ This action is a `node16` action.
 
 ## Examples
 
-TODO
+This workflow repository has an [example workflow](https://github.com/alistaircol/update-markdown-action/blob/main/.github/workflows/example.yaml).
+
+It updates the development section below with contents of `task --list`.
 
 ## Development
 
