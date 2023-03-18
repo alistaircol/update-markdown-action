@@ -1,0 +1,20 @@
+---
+name: Unit Test
+
+# yamllint disable-line rule:truthy
+on:
+  workflow_dispatch:
+  push:
+    paths:
+    - "**/*.js"
+    - .github/workflows/test.yaml
+    paths-ignore:
+    - node_modules/
+
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - run: npm ci
+    - run: npm test
