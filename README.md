@@ -129,7 +129,7 @@ task: Available tasks for this project:
 # get most recent version
 git --no-pager tag |  sort -V
 # increment version
-git tag -a -m "Refactor and add unit tests" v0.0.2
+git tag -a -m "Add comment after opening delimiter stating this section is ephemeral" v0.0.3
 git push --follow-tags
 ```
 
