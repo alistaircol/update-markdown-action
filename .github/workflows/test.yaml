@@ -6,10 +6,10 @@ on:
   workflow_dispatch:
   push:
     paths:
-    - "**/*.js"
+    - index.js
+    - lib/**/*.js
+    - tests/**/*.js
     - .github/workflows/test.yaml
-    paths-ignore:
-    - node_modules/
 
 jobs:
   unit:
