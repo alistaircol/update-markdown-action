@@ -52,11 +52,30 @@ Can become
 <!-- https://github.com/npalm/action-docs#tldr -->
 
 <!-- action-docs-description -->
+## Description
 
+Update a section in a markdown with arbitrary markup
+<!-- action-docs-description -->
+
+<!-- action-docs-inputs -->
+## Inputs
+
+| parameter | description | required | default |
+| --- | --- | --- | --- |
+| file | Relative path to markdown document to update | `false` | README.md |
+| delimiter_open | Opening delimiter to indicate the section to update | `false` | `<!-- start-section -->` |
+| delimiter_close | Closing delimiter to indicate the section to update | `false` | `<!-- end-section -->` |
+| content | Contents to place inside the section delimiters | `true` |  |
 <!-- action-docs-inputs -->
 
 <!-- action-docs-outputs -->
 
+<!-- action-docs-outputs -->
+
+<!-- action-docs-runs -->
+## Runs
+
+This action is a `node16` action.
 <!-- action-docs-runs -->
 
 ---
