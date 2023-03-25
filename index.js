@@ -3,8 +3,8 @@ const update_document = require("./lib/update_document");
 
 try {
   const file = core.getInput('file');
-  const delimiterOpen = core.getInput('delimiter-open');
-  const delimiterClose = core.getInput('delimiter-close');
+  const delimiterOpen = core.getInput('delimiter_open');
+  const delimiterClose = core.getInput('delimiter_close');
   const contents = `
 <!-- DO NOT EDIT THIS SECTION - IT IS UPDATED BY A GITHUB WORKFLOW -->
 ${core.getInput('content')}

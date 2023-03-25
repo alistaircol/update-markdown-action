@@ -34,8 +34,8 @@ jobs:
       uses: alistaircol/update-markdown-action@v0.0.2
       with:
         file: README.md
-        delimiter-open: <!-- start-task-list -->
-        delimiter-close: <!-- end-task-list -->
+        delimiter_open: <!-- start-task-list -->
+        delimiter_close: <!-- end-task-list -->
         content: |
           > **Note**
           > This comment marks the start of a section which is updated using this action in an [example workflow](https://github.com/alistaircol/update-markdown-action/blob/main/.github/workflows/example.yaml#L33)!
