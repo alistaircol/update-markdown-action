@@ -9,9 +9,6 @@
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
 - [Summary](#summary)
-- [Description](#description)
-- [Inputs](#inputs)
-- [Runs](#runs)
 - [Usage](#usage)
 - [Examples](#examples)
 - [Development](#development)
