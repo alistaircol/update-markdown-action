@@ -31,7 +31,7 @@ jobs:
       run: |
         { echo "tasks<<EOF"; task; echo "EOF"; } >> "$GITHUB_OUTPUT"
     - name: Update development tasks section
-      uses: alistaircol/update-markdown-action@v0.0.2
+      uses: alistaircol/update-markdown-action@v0.1.0
       with:
         file: README.md
         delimiter_open: <!-- start-task-list -->
