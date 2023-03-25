@@ -55,43 +55,14 @@ Can become
 <!-- https://github.com/npalm/action-docs#tldr -->
 
 <!-- action-docs-description -->
-## Description
 
-Update a section in a markdown with arbitrary markup
-<!-- action-docs-description -->
-
-<!-- action-docs-inputs -->
-## Inputs
-
-| parameter | description | required | default |
-| --- | --- | --- | --- |
-| file | Relative path to markdown document to update | `false` | README.md |
-| delimiter-open | Opening delimiter to indicate the section to update | `false` | `<!-- start-section -->`
-> **Note**
-> This comment marks the start of a section which is updated using this action in an [example workflow](https://github.com/alistaircol/update-markdown-action/blob/main/.github/workflows/example.yaml#L33)!
-
-```
-task: Available tasks for this project:
-* actionlint:       Lint all workflow yaml files
-* build:            Build action source for `dist`
-* yamllint:         Lint all yaml files (and actionlint on workflow files)
-```
-
-> **Note**
-> This comment marks the end of a section which is updated using this action!
-`<!-- end-section -->` |
-| content | Contents to place inside the section delimiters | `true` |  |
 <!-- action-docs-inputs -->
 
 <!-- action-docs-outputs -->
 
-<!-- action-docs-outputs -->
-
 <!-- action-docs-runs -->
-## Runs
 
-This action is a `node16` action.
-<!-- action-docs-runs -->
+---
 
 ## Usage
 
@@ -163,13 +134,13 @@ Testing the action locally for a sanity check.
 ```bash
 cat <<EOF > e2e.md && \
   INPUT_FILE=e2e.md \
-  INPUT_DELIMITER_OPEN='<!-- start-section -->' \
-  INPUT_DELIMITER_CLOSE='<!-- end-section -->' \
+  INPUT_DELIMITER_OPEN='<!-- e2e-start-section -->' \
+  INPUT_DELIMITER_CLOSE='<!-- e2e-end-section -->' \
   INPUT_CONTENT='sjdnfljsndfljnsdflkn' \
   node dist/index.js \
   && less e2e.md \
   && rm e2e.md
-<!-- start-section -->
-<!-- end-section -->
+<!-- e2e-start-section -->
+<!-- e2e-end-section -->
 EOF
 ```
