@@ -16,6 +16,7 @@
 - [Examples](#examples)
 - [Development](#development)
 - [Testing](#testing)
+- [E2E Testing](#e2e-testing)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
