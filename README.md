@@ -16,6 +16,7 @@
 - [Examples](#examples)
 - [Development](#development)
 - [Testing](#testing)
+- [E2E Testing](#e2e-testing)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -139,4 +140,22 @@ git push --follow-tags
 
 ```bash
 npm run test
+```
+
+## E2E Testing
+
+Testing the action locally for a sanity check.
+
+```bash
+cat <<EOF > e2e.md && \
+  INPUT_FILE=e2e.md \
+  INPUT_DELIMITER_OPEN='<!-- start-section -->' \
+  INPUT_DELIMITER_CLOSE='<!-- end-section -->' \
+  INPUT_CONTENT='sjdnfljsndfljnsdflkn' \
+  node dist/index.js \
+  && less e2e.md \
+  && rm e2e.md
+<!-- start-section -->
+<!-- end-section -->
+EOF
 ```

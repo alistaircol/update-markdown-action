@@ -11,11 +11,11 @@ inputs:
     required: false
     description: Relative path to markdown document to update
     default: README.md
-  delimiter-open:
+  delimiter_open:
     required: false
     description: Opening delimiter to indicate the section to update
     default: "`<!-- start-section -->`"
-  delimiter-close:
+  delimiter_close:
     required: false
     description: Closing delimiter to indicate the section to update
     default: "`<!-- end-section -->`"
@@ -25,4 +25,4 @@ inputs:
 
 runs:
   using: node16
-  main: index.js
+  main: dist/index.js
