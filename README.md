@@ -122,12 +122,14 @@ I have used this workflow elsewhere to:
 ## Development
 
 <!-- start-task-list -->
+<!-- DO NOT EDIT THIS SECTION - IT IS UPDATED BY A GITHUB WORKFLOW -->
 > **Note**
 > This comment marks the start of a section which is updated using this action in an [example workflow](https://github.com/alistaircol/update-markdown-action/blob/main/.github/workflows/example.yaml#L33)!
 
 ```
 task: Available tasks for this project:
 * actionlint:       Lint all workflow yaml files
+* build:            Build action source for `dist`
 * yamllint:         Lint all yaml files (and actionlint on workflow files)
 ```
 
