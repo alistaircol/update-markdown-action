@@ -66,8 +66,20 @@ Update a section in a markdown with arbitrary markup
 | parameter | description | required | default |
 | --- | --- | --- | --- |
 | file | Relative path to markdown document to update | `false` | README.md |
-| delimiter-open | Opening delimiter to indicate the section to update | `false` | `<!-- start-section -->` |
-| delimiter-close | Closing delimiter to indicate the section to update | `false` | `<!-- end-section -->` |
+| delimiter-open | Opening delimiter to indicate the section to update | `false` | `<!-- start-section -->`
+> **Note**
+> This comment marks the start of a section which is updated using this action in an [example workflow](https://github.com/alistaircol/update-markdown-action/blob/main/.github/workflows/example.yaml#L33)!
+
+```
+task: Available tasks for this project:
+* actionlint:       Lint all workflow yaml files
+* build:            Build action source for `dist`
+* yamllint:         Lint all yaml files (and actionlint on workflow files)
+```
+
+> **Note**
+> This comment marks the end of a section which is updated using this action!
+`<!-- end-section -->` |
 | content | Contents to place inside the section delimiters | `true` |  |
 <!-- action-docs-inputs -->
 
