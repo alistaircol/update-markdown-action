@@ -142,7 +142,7 @@ task: Available tasks for this project:
 # get most recent version
 git --no-pager tag |  sort -V
 # increment version
-git tag -a -m "Add comment after opening delimiter stating this section is ephemeral" v0.0.3
+git tag -a -m "Use `ncc` to create dist version, removing `node_modules` from repo" v0.1.0
 git push --follow-tags
 ```
 
