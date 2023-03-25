@@ -2,6 +2,17 @@ const path = require('path');
 const fs = require('fs');
 const update_document = require("../lib/update_document");
 
+const resetTestMdFile = () => {
+  const file = path.join(__dirname, 'test.md');
+
+  const contents = '';
+
+  fs.writeFileSync(file, contents);
+};
+
+beforeEach(resetTestMdFile);
+afterEach(resetTestMdFile)
+
 test('it will fail when the file does not exist', () => {
   const file = 'blah';
 
