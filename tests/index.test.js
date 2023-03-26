@@ -1,6 +1,6 @@
 const path = require('path');
 const fs = require('fs');
-const update_document = require("../lib/update_document");
+const update_document = require("../src/lib/update_document");
 
 const resetTestMdFile = () => {
   const file = path.join(__dirname, 'test.md');

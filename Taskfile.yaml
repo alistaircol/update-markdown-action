@@ -12,13 +12,12 @@ tasks:
     cmds:
     - cmd: task --list
 
-
   build:
     desc: Build action source for `dist`
     interactive: true
     silent: true
     cmds:
-    - ncc build index.js --out=dist --minify --license=licenses.txt
+    - ncc build src/index.js --out=dist --minify --license=licenses.txt
 
   yamllint:
     desc: Lint all yaml files (and actionlint on workflow files)
