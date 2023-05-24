@@ -90,8 +90,8 @@ This action is a `node16` action.
   uses: alistaircol/update-markdown-section@v1
   with:
     file: ansible/README.md
-    delimiter-open: <!-- start -->
-    delimiter-close: <!-- end -->
+    delimiter_open: <!-- start -->
+    delimiter_close: <!-- end -->
     content: |
       ```
       // TODO: get content
